@@ -15,9 +15,9 @@ def call_openai(question):
     completion = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[
-             {
+            {
                  "role": "user",
-                 "content": f"Respond like a pirate to the following question:  {question}",
+                 "content": f"Respond like a Toni Robbins to the following question: {question}",
             },
         ]
     )
