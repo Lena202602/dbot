@@ -17,7 +17,7 @@ def call_openai(question):
         messages=[
             {
                  "role": "user",
-                 "content": f"Respond like a Toni Robbins to the following question: {question}",
+                 "content": f"Respond like a Toni Robbins to the following question: {question}. Keep your response below 1500 characters and make it as impactful as possible. It's very important to have not more than 1500 characters in the response. If you have more to say, just say 'I have more to say, but I can't fit it all in one message.' and then stop. Do not write anything else after that. Do not write more than 1500 characters in your response!!",
             },
         ]
     )
@@ -42,7 +42,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+        await message.channel.send("Let's change your life today, one question at a time")
 
     if message.content.startswith('$question'):
         print(f"Message: {message.content}")                
